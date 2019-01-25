@@ -16,3 +16,9 @@ class Solution {
             if (next <= current)
                 return false;
         }
+
+
+    return true;
+}
+
+}
