@@ -1,5 +1,18 @@
 class Solution {
     public boolean checkPossibility(int[] nums) {
+        int current;
+        int next;
+        int previous;
+        if(nums==null)
+            return false;
+        for(int i = 1; i < nums.length-1; i ++){
+            previous = nums[i-1];
+            current = nums[i];
+            next = nums[i+1];
 
-    }
-}
+            if(next > current){
+                return true;
+            }
+            if (next <= current)
+                return false;
+        }
