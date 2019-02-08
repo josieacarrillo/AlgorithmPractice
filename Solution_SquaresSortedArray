@@ -1,0 +1,13 @@
+class Solution {
+    public int[] sortedSquares(int[] A) {
+        int[] sorted = new int[A.length];
+        for(int i = 0; i < A.length; i++){
+            int num = A[i];
+            int sq = num * num;
+            sorted[i] = sq;
+        }
+            Arrays.sort(sorted);
+
+   return sorted;
+        }
+}
