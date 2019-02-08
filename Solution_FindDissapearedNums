@@ -7,9 +7,13 @@ class Solution {
         for(int i =0; i < nums.length-1; i++){
             for(int j = 1; j < nums.length; j++){
                 int difference = nums[j]-nums[i];
-                if ( difference > 1){
+                if ( difference == 1){
+                    break;
+
+                }
+                else{
                     for(int k = 1; k < difference; k++){
-                        int newNum = nums[i]+nums[k];
+                        int newNum = nums[i]+k;
                         dissNums.add(newNum);
                     }
                 }
