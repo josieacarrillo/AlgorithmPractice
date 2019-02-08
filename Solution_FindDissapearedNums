@@ -1,0 +1,22 @@
+class Solution {
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+
+        Arrays.sort(nums);
+        List<Integer> dissNums = new ArrayList<Integer>();
+
+        for(int i =0; i < nums.length-1; i++){
+            for(int j = 1; j < nums.length; j++){
+                int difference = nums[j]-nums[i];
+                if ( difference > 1){
+                    for(int k = 1; k < difference; k++){
+                        dissNums.add(nums[i+k])
+                    }
+                }
+            }
+
+
+        }
+
+   return dissNums;
+    }
+}
