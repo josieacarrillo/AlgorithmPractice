@@ -1,13 +1,13 @@
 class Solution {
     public int[] plusOne(int[] digits) {
-        int n = digits.length-1;
-        int newArr = new int[n+1];
-
-            for ( int i = 0; i < digits.length; i++){
-                if(n == i){
-                    newArr[n] =
-
-                }
+        int n = digits.length;
+        int[] plusOne = new int[n];
+        for ( int i = 0; i < n; i++ ){
+            plusOne[i] = digits[i];
+            if( i == n-1){
+                plusOne[i] = digits[i] + 1;
             }
+        }
+        return plusOne;
     }
 }
