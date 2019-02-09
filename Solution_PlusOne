@@ -1,8 +1,16 @@
 class Solution {
     public int[] plusOne(int[] digits) {
         int n = digits.length;
-        int[] plusOne = new int[n+1];
-        if(n >1){
+        int[] plusOne = new int[n];
+
+       if(n ==1 && digits[0] == 9 ){
+           int[] newA = new int[2];
+            newA[0] = 1;
+            newA[1] = 0;
+        }
+
+
+          if(n > 1){
         for ( int i = 0; i < n; i++ ){
             plusOne[i] = digits[i];
             if (i == n-1 && digits[n-1] == 9){
@@ -14,11 +22,12 @@ class Solution {
 
             }
         }
-     }
-        else if(n ==1 && digits[0] == 9 ){
-            plusOne[0] = 1;
-            plusOne[1] = 0;
-        }
-        return plusOne;
+
+
+
+
+
     }
+       return plusOne;
+}
 }
