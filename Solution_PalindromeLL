@@ -1,0 +1,31 @@
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+
+      LinkedList<Integer> linkedlist = new LinkedList<Integer>();
+
+        while(head != null){
+        ListNode copy = head;
+        copy.next = head.next;
+
+        ListNode prev = null;
+        ListNode curr = head;
+        ListNode next = null;
+
+        while (curr!= null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+        if(head != copy) return false;
+ }
+       return true;
+        }
+
+
+
+
+    }
+
+    
