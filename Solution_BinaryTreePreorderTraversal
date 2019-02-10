@@ -1,26 +1,23 @@
 class Solution {
-    public List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> llist = new LinkedList<Integer>();
+    public List<Integer> preorderTraversal(TreeNode node) {
+          List<Integer> list = new ArrayList();
 
-
-
-        TreeNode curr = root;
-
-        while(curr != null ){
-            llist.add(curr.val);
-
+    while(node != null) {
+        if(node.left == null) {
+            list.add(node.val);
+            node = node.right;
         }
+        else {
+            TreeNode nextNode = node.left;
 
-        curr = curr.right;
+            TreeNode p = nextNode;
+            while(p.right != null) p = p.right;
 
-        if (curr == null && curr.right != null){
-
-            llist.add(curr.right.val);
-            curr = curr.right;
-
+            list.add(node.val);
+            p.right = node.right;
+            node = nextNode;
         }
-
-
-        return llist;
     }
+    return list;
+}
 }
