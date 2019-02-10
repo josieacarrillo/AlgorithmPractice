@@ -1,14 +1,21 @@
 class Solution {
     public boolean isPalindrome(ListNode head) {
 
-      LinkedList<Integer> linkedlist = new LinkedList<Integer>();
+        ListNode t = head;
+        ListNode copy = new ListNode();
+        ListNode t2 = copy;
 
-        while(head != null){
-        ListNode copy = head;
-        copy.next = head.next;
+        copy.val = head.val;
 
+        while(t.next != null){
+            t = t.next;
+            t2.next = new ListNode();
+            t2 = t2.next;
+            t2.val = t.val;
+
+        }
         ListNode prev = null;
-        ListNode curr = head;
+        ListNode curr = copy;
         ListNode next = null;
 
         while (curr!= null){
@@ -17,15 +24,24 @@ class Solution {
             prev = curr;
             curr = next;
         }
-        head = prev;
-        if(head != copy) return false;
- }
-       return true;
+        copy = prev;
+
+        while(t != null){
+            if(t.val!= t2.val)return false;
+            t = t.next;
+            t2 = t2.next;
         }
+        return true;
+
+
+
+
+
+     }
+}
+    
 
 
 
 
     }
-
-    
