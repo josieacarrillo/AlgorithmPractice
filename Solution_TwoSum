@@ -1,0 +1,17 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int solution = i + j;
+        for(int i = 0; i < nums.length; i++){
+            for(int j = 0; j < nums.length; j++){
+                if(j!= i && i > j && target == solution){
+                    int[] solArr = new Array;
+                    solArr[1] = j;
+                    solArr[2] = i;
+                    return solArr;
+
+                }
+            }
+        }
+
+    }
+}
