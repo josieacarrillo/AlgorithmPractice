@@ -1,17 +1,16 @@
 class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        int solution = i + j;
-        for(int i = 0; i < nums.length; i++){
-            for(int j = 0; j < nums.length; j++){
-                if(j!= i && i > j && target == solution){
-                    int[] solArr = new Array;
-                    solArr[1] = j;
-                    solArr[2] = i;
-                    return solArr;
+    public int[] twoSum(int[] numbers, int target) {
+    int[] result = new int[2]; // create an array to return
 
-                }
-            }
+    Map<Integer, Integer> map = new HashMap<Integer, Integer>(); //create a hashmap to see if the values are there
+    for (int i = 0; i < numbers.length; i++) { //loop through array
+        if (map.containsKey(target - numbers[i])) { //check if value is in hasmap
+            result[1] = i ; //if it is, set them into array res
+            result[0] = map.get(target - numbers[i]); //find the corresponding number
+            return result;
         }
-
+        map.put(numbers[i], i);
     }
+    return result;
+}
 }
