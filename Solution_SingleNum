@@ -1,0 +1,15 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+
+        Set<Integer> hashSet = new HashSet<>();
+
+        for(int i: nums){
+            if(hashSet.contains(i)){
+                hashSet.remove(i);
+
+                }
+            hashSet.add(i);
+        }
+        return hashSet;
+    }
+}
