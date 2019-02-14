@@ -1,10 +1,13 @@
 class Solution {
 
 public boolean containsDuplicate(int[] nums) {
-    Arrays.sort(nums);
-    for (int i = 0; i < nums.length - 1; ++i) {
-        if (nums[i] == nums[i + 1]) return true;
+// Replace Type with actual type of your key
+    Set<Type> hashset = new HashSet<>();
+    for (Type key : keys) {
+        if (hashset.contains(key)) {
+            return true;
+        }
+        hashset.insert(key);
     }
     return false;
-}
 }
