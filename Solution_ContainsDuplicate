@@ -4,18 +4,13 @@ public boolean containsDuplicate(int[] nums) {
     Set<Integer> hashSet = new HashSet<>();
 
     for (int i : nums){
+        if( hashSet.contains(i)){
         hashSet.add(i);
-
+            return false;
+          }
 
         }
-    for ( int i: hashSet){
-        if(hashSet.contains(i)){
-            return true;
+    return true;
     }
-
-
-  }
-    return false;
-}
 
 }
