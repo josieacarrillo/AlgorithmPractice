@@ -1,0 +1,18 @@
+class Solution{
+
+public String reverseString(String string){
+
+for(int i = 0; i < string.length(); i++){
+ char first = string.charAt(i);
+ char last = string.charAt(string.length-1);
+ first = last;
+ last = string.charAt(i);
+}
+  return string;
+  }
+
+  public static main(String[] args){
+  String st = "2016";
+  String new = st.reverseString;
+  }
+}
