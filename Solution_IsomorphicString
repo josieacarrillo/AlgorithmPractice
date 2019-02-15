@@ -13,11 +13,7 @@ class Solution {
                     return false;
                 }
             }
-            else{
-                if(map.get(b)!= b){
-                    return false;
-                }
-                }
+
             map.put(a,b);
 
         }
