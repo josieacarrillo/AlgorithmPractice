@@ -1,16 +1,16 @@
 class Solution {
     public int singleNumber(int[] nums) {
-
         Set<Integer> hashSet = new HashSet<>();
-
-        for(int i: nums){
-            if(hashSet.contains(i)){
-                hashSet.remove(i);
-
-                }
-            hashSet.add(i);
-
+        int result = 0;
+        for(int i : nums){
+            if(!hashSet.contains(i)){
+                hashSet.add(i);
+            }
+            else hashSet.remove(i);
         }
-
+        for(int i : hashSet){
+            result =i;
+        }
+        return result;
     }
 }
