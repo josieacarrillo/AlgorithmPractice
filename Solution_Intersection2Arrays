@@ -1,0 +1,29 @@
+class Solution {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        Set<Integer> hashSet = new HashSet<>();
+        Set<Integer> intersect = new HashSet<>();
+
+        for(int i : nums1){
+            hashSet.add(i);
+        }
+
+        for(int i : nums2){
+            if(hashSet.contains(i)){
+                intersect.add(i);
+
+            }
+
+
+        }
+        int[] result = new int[intersect.size()];
+        int i = 0;
+
+        for(Integer num : intersect){
+
+
+            result[i++] = num;
+        }
+
+        return result ;
+    }
+}
