@@ -7,8 +7,20 @@ class Solution {
             char a = s.charAt(i);
             char b = t.charAt(i);
 
+            if(map.containsKey(a)){
 
+                if(map.get(a)!= b){
+                    return false;
+                }
+            }
+            else{
+                if(map.get(b)!= b){
+                    return false;
+                }
+                }
+            map.put(a,b);
 
         }
+        return true;
     }
 }
