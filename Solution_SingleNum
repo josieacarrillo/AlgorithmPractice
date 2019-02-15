@@ -9,7 +9,8 @@ class Solution {
 
                 }
             hashSet.add(i);
+
         }
-        return hashSet;
+
     }
 }
