@@ -9,12 +9,20 @@ class Solution {
 
             if(map.containsKey(a)){
 
-                if(map.get(a)!= b){
+                if(map.get(a)!= b){  //check if a is mapped to a dif character besides b
                     return false;
                 }
             }
+            else{
+                if(!map.containsValue(b))  // check if it does not have b- then dont have to worry about issues
+                map.put(a,b);  // keep going, no prob
+                else
+                    return false;
 
-            map.put(a,b);
+            }
+
+
+            map.put(a,b); // dont forget to keep adding to hash map or else you wont compare anything
 
         }
         return true;
