@@ -1,0 +1,23 @@
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int[] sol = new int[2];
+
+          for(int i = numbers.length-1; i > 0; i --){
+           for(int j = 0; j < i; j++){
+
+               int poss = numbers[i] + numbers[j];
+
+               while(j!=i){
+                   if(poss = target){
+                       sol[0] = i;
+                       sol[1] = j;
+                   }
+               }
+           }
+
+            }
+        return sol;
+
+
+    }
+}
