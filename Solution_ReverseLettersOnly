@@ -1,0 +1,19 @@
+class Solution {
+    public String reverseOnlyLetters(String S) {
+       String s2 = new String;
+
+        int i =0;
+        int j = S.length()-1;
+
+
+        for(int i = 0; i < j; i++){
+
+            if(S.isLettter(charAt(i))&& S.Letter(charAt(j-i))){
+
+
+            }
+
+        }
+    }
+
+}
