@@ -4,16 +4,25 @@ class Solution {
         if(s.length() == 0) return true;
 
         String sLower = s.toLowerCase();
-        int j = sLower[sLower.length()-1];
+        int i = sLower.charAt(0);
+        int j = sLower.charAt(sLower.length()-1);
 
-        for (int i = 0; i < sLower.length() i ++){
-            Character first = sLower[i];
-            Chracter last = sLower[j-i];
-            if(! Character.isLetter(first) || !Character.isDigit(first)){
-                i++
-            else{
-                if()
-            }
+        while(j > i ){
+            Character first = sLower.charAt(i);
+            Character last = sLower.charAt(j-i);
+            if(! Character.isLetter(first) || !Character.isDigit(first))
+                i++;
+            if(! Character.isLetter(last) || !Character.isDigit(last))
+                j--;
+
+             if(sLower.charAt(i) != sLower.charAt(j-i)) return false;
+
 
         }
-}
+        return true;
+    }
+
+
+
+
+    }
