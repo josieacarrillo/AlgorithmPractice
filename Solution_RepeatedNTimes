@@ -1,0 +1,19 @@
+class Solution {
+    public int repeatedNTimes(int[] A) {
+        HashSet<Integer> set = new HashSet<Integer>();
+        Arrays.sort(A);
+
+        int output = 0;
+
+        for(int i : A){
+
+            if(set.contains(A[i])){
+                output = A[i];
+                break;
+            }
+            set.add(A[i]);
+
+        }
+        return output;
+    }
+}
