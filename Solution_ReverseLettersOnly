@@ -1,8 +1,18 @@
 class Solution {
     public String reverseOnlyLetters(String S) {
     StringBuilder S2 = new StringBuilder();
-        for(int i = S.length()-1; i >= 0; i --){
-            S2.append(S.charAt(i));
+        int j = S.length()-1;
+        for(int i = 0; i< S.length() ; i ++ ){
+            if(Character.isLetter(S.charAt(i))){
+                if(Character.isLetter(S.charAt(j)))
+                    S2.append(S.charAt(j));
+
+            }
+            else S2.append(S.charAt(i));
+
+
+            j--;
+
         }
         return S2.toString();
     }
