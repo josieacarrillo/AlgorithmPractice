@@ -2,12 +2,16 @@ class Solution {
     public int[] plusOne(int[] digits) {
         int n = digits.length;
 
-        if(digits.length == 1 && digits[0] == 9){
+        if(n == 1 && digits[0] == 9){
             int[] plusOne = new int[2];
             plusOne[0] = 1;
             plusOne[1] = 0;
 
             return plusOne;
+        }
+
+        if(digits[n-1] != 9){
+            digits[n-1] = digits[n-1] + 1;
         }
 
     return digits;
