@@ -1,26 +1,23 @@
-class Solution {
-    public String reverseVowels(String s) {
-        int i = 0;
-        int j = s.length()-1;
-        char[] arr = s.toCharArray();
-        while ( i < j){
-            if (i < j && ! isVowel(arr[i])) i++;
-            if (i < j && ! isVowel(arr[j])) j--;
-
-                Character temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-                i++;
+public class Solution {
+public String reverseVowels(String s) {
+    StringBuilder sb = new StringBuilder();
+    int j = s.length() - 1;
+    for (int i = 0; i < s.length(); i++)
+    {
+        if ("AEIOUaeiou".indexOf(s.charAt(i)) != -1)
+        {
+            while (j >= 0 && "AEIOUaeiou".indexOf(s.charAt(j)) == -1)
+            {
                 j--;
-
+            }
+            sb.append(s.charAt(j));
+            j--;
         }
-        String b = new String(arr);
-        return b;
-
+        else
+            sb.append(s.charAt(i));
     }
+    return sb.toString();
+}
+}
 
-         public boolean isVowelnLetter(Character c){
-             return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c== 'E' || c == 'I' || c == 'O' || c == 'U' ;
-
-    }
 }
