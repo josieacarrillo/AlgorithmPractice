@@ -1,35 +1,15 @@
 class Solution {
     public int findPairs(int[] nums, int k) {
+        if (k < 0) return 0;
 
-        HashSet<Integer> set = new HashSet<Integer>();
-        HashSet<Integer> difference = new HashSet<Integer>();
+        Set<Integer> numbers = new HashSet<>();
+        Set<Integer> found = new HashSet<>();
 
-        for(Integer i : nums){
-            set.add(i);
+        for (int n : nums) {
+            if (numbers.contains(n + k)) found.add(n);
+            if (numbers.contains(n - k)) found.add(n - k);
+            numbers.add(n);
         }
-        int count = 0;
-
-        for(Integer i : set){
-
-            System.out.println("i =" + i);
-
-            int dif = Math.abs(i - k);
-
-            System.out.println( "difference =" + dif);
-
-             if( set.contains(dif) ){
-
-
-
-                     count ++;
-
-             }
-
-
-        }
-
-
-
-        return count;
+        return found.size();
     }
 }
