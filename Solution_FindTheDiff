@@ -1,0 +1,21 @@
+class Solution {
+    public char findTheDifference(String s, String t) {
+
+        HashSet<Character> set = new HashSet<Character>();
+
+        for(int i = 0; i < s.length(); i++){
+            set.add(s.charAt(i));
+        }
+        Character ans = null;
+        for(int i =0; i <t.length(); i++){
+            if(!set.contains(t.charAt(i))){
+                ans = t.charAt(i);
+                set.add(ans);
+
+
+            }
+        }
+        return ans;
+
+    }
+}
