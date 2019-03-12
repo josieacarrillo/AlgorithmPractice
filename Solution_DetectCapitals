@@ -15,8 +15,9 @@ class Solution {
                 }
             }
             if(Character.isLowerCase(secondCharacter)){
-                 for(int i = 0; i < word.length(); i++){
+                 for(int i = 1; i < word.length(); i++){
                     char character = word.charAt(i);
+                     System.out.println(character);
                     if(!Character.isLowerCase(character)) return false;
 
             }
@@ -24,11 +25,7 @@ class Solution {
 
 
         }
-         else{
-            for(int i = 0; i < word.length(); i++){
-                char character = word.charAt(i);
-                if(!Character.isLowerCase(character)) return false;
-            }
+
 
         }
         return true;
