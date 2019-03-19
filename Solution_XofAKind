@@ -1,0 +1,25 @@
+class Solution {
+    public boolean hasGroupsSizeX(int[] deck) {
+
+        Arrays.sort(deck);
+        HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
+
+        for(int i = 0; i < deck.length; i++){
+
+     if(map.contains(deck[i])){
+        int val = map.get(deck[i]) +1;
+        map.put(deck[i],val)
+
+        System.out.println(deck[i] + val);
+
+    }
+
+   else  map.put(deck[i], 1);
+        }
+        int value = map.get(1);
+        for(int i : map){
+            if()return false;
+        }
+        return true;
+        }
+}
