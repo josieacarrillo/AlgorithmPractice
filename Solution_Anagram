@@ -6,7 +6,13 @@ class Solution {
         if(sSize!=tSize){
             return false;
         }
-      
+        char[] sStr = s.toCharArray();
+        char[] tStr = t.toCharArray();
+        Arrays.sort(sStr);
+        Arrays.sort(tStr);
+        if(!Arrays.equals(sStr,tStr)){
+            return false;
+        }
         return true;
     }
 }
