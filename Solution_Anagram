@@ -1,0 +1,12 @@
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        int sSize = s.length();
+        int tSize = t.length();
+
+        if(sSize!=tSize){
+            return false;
+        }
+      
+        return true;
+    }
+}
